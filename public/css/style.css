@@ -1,0 +1,162 @@
+/* *{
+    background-color: bisque;
+} */
+ .listings-container{
+    min-height: 100vh !important;
+    display:grid !important;
+    grid-template-rows: auto 1fr auto !important;
+ }
+
+/* navbar */
+.navbar{
+    height:5rem;
+    width:100% !important;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top:0;
+    z-index: 1000 !important;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fe424d;
+    font-size: 2.5rem;
+}
+.navbar-brand>p{
+    font-size: 1.5rem;
+   margin-top: 1rem;
+   font-weight: 500;
+}
+.nav-item{
+    color:#222222;
+}
+/* footer */
+
+.f-info-links a{
+    text-decoration:none;
+    color:#222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline !important;
+}
+
+.footer{
+    height:10rem;
+    width:100% !important;
+    margin:auto;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Card */
+  .index-container {
+            display: flex !important;
+            flex-direction: row !important;
+            row-gap: 1.5rem !important;
+        }
+
+        
+.index-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width:100% !important;
+    height:320px;
+    object-fit: cover !important;
+}
+
+.row a{
+    text-decoration: none;
+}
+.opt-btn{
+    display: flex;
+}
+.opt-btn button{
+    margin-right: 10px;
+}
+
+/* show.ejs */
+.show-img{
+   height: 340px;
+    width: 700px;
+}
+
+/* search-bar */
+
+ .search-bar{
+    border-radius: 4rem !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+.search-bar>input:hover{
+    border: 1px solid #fe424d !important;
+}
+.search-bar>button:hover{
+    background-color:white !important;
+    color: #fe424d !important;
+     border: 1px solid #fe424d !important;
+}
+
+.search-bar input{
+    border:none !important;
+    outline: none !important;
+    padding: 10px 20px !important;
+    border-radius: 4rem !important;
+    width: 400px !important;
+    background-color: #fbf7f5;
+}
+
+
+.search-bar button{
+    border:none !important;
+    outline: none !important;
+    background-color: #fe424d !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 4rem !important;
+}
+
+/* Theme Toggle */
+/* Light mode */
+body {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Toggle button */
+.theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Dark mode cards */
+.dark-mode .card {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .iconbar a {
+    color: white;
+}
+

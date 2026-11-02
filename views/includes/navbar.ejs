@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="/listings">
+            <i class="fa-brands fa-airbnb"></i>
+           <p><i>Wanderlust</i></p> 
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarLeftDrawer"
+            aria-controls="navbarLeftDrawer"
+            aria-label="Open navigation menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation drawer -->
+        <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="navbarLeftDrawer"
+            aria-labelledby="navbarLeftDrawerLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="navbarLeftDrawerLabel">
+                    Wanderlust Menu
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                    <li class="nav-item">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listings/new">
+                            Create New Listing
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search bar -->
+                <form class="search-bar d-flex" action="/listings" method="GET" role="search">
+                    <input
+                        class="form-control"
+                        type="search"
+                        name="search"
+                        placeholder="Search listings"
+                        aria-label="Search listings">
+
+                    <button class="btn btn-outline-danger ms-2" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <button class="theme-toggle" id="themeToggle" type="button">
+                 <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- Authentication links -->
+                <div class="navbar-nav ms-lg-auto mt-3 mt-lg-0">
+                    <% if (!currentUser) { %>
+                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/signup">Signup</a>
+                    <% } else { %>
+                        <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
